@@ -1,0 +1,67 @@
+<section *ngIf="musica">
+  <h1 class="mb-4 mt-5 border-bottom">{{musica.titulo}}</h1>
+  <div>
+    <span *ngIf="musica.artistas.length == 1"><i class="text-muted fas fa-user"></i></span>
+    <span *ngIf="musica.artistas.length != 1"><i class="text-muted fas fa-users"></i></span>
+    &nbsp;
+    <span *ngFor="let artista of musica.artistas; last as ultimo">
+      <a [routerLink]="['/artistas', artista.id]">{{ artista.nome }}</a><span *ngIf="!ultimo">, </span>
+    </span>
+  </div>
+  <div>
+    <i class="text-muted fas fa-tag"></i>
+    &nbsp;
+    {{musica.genero.nome}}
+  </div><br>
+  <div>
+    <span>
+      <button (click)="disco.like(musica.titulo)" type="button" class="btn btn-success">Gostei</button> |
+      <button (click)="disco.naoGostar(musica.titulo)" type="button" class="btn btn-danger">Nao Gostei</button>
+    </span>
+    <span>
+      <h5> {{musica.gostar}} | {{musica.nGostar}}</h5>
+
+    </span>
+  </div>
+  <div>
+    <h5 *ngFor='let musica of disco.favoritos'>{{musica.titulo}}</h5>
+  </div>
+</section>
+
+<section>
+<p *ngIf="musica.gostar">
+    <span *ngFor="let artista of musica.artistas">
+      <span
+        *ngFor="let musica of disco.listaDeMusicasDoArtista(artista.nome)"
+      >
+        <span *ngFor="let genero of disco.listaDeGeneros()">
+          <span *ngIf="genero.nome === musica.genero.nome">
+            <p *ngFor="let musica of genero.musicas">
+              {{ musica.titulo }}
+            </p>
+          </span>
+        </span>
+      </span>
+      <br />
+    </span>
+  </p>
+  <p *ngIf="musica.nGostar">
+    <span *ngFor="let artista of musica.artistas">
+      <span
+        *ngFor="let musica of disco.listaDeMusicasDoArtista(artista.nome)"
+      >
+        <!-- <span>
+          {{ musica.titulo }}
+        </span> -->
+        <span *ngFor="let genero of disco.listaDeGeneros()">
+          <span *ngIf="genero.nome !== musica.genero.nome">
+            <p *ngFor="let musica of genero.musicas">
+              {{ musica.titulo }}
+            </p>
+          </span>
+        </span>
+      </span>
+      <br />
+    </span>
+  </p>
+</section>

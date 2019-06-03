@@ -1,0 +1,8 @@
+<section>
+    <h1 class="mb-4 mt-5 border-bottom">Músicas</h1>
+    <div *ngFor="let genero of generos">
+        <a [routerLink]="[ '/generos',genero.id]" (click)="salvarGenero(genero.nome,genero.id)">{{genero.nome}}</a>
+    </div>
+</section>
+
+
