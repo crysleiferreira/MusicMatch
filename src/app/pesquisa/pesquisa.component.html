@@ -1,8 +1,23 @@
-<div class="md-form">
-    <input type="search" [(ngModel)]="search" placeholder="buscar música" />
+<section>
+  <h1 class="mb-4 mt-5 border-bottom">Pesquisa</h1>
+  <p>Utilize entrada de texto a seguir para realizar a pesquisa de músicas, artistas e gêneros musicais.</p>
+  <form (submit)="pesquisar()">
+    <div class="input-group">
+      <input type="text" id="busca" name="busca" class="form-control form-control-lg" [(ngModel)]="busca">
+      <div class="input-group-append">
+        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </form>
+  <div class="mt-4" *ngIf="lista">
+    <div class="list-group">
+      <a *ngFor="let item of lista" [routerLink]="getRouterLink(item)" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 *ngIf="item.tipo == 'música'" class="mb-1"><i class="fas fa-music"></i> {{item.titulo}}</h5>
+          <h5 *ngIf="item.tipo == 'gênero'" class="mb-1"><i class="fas fa-tag"></i> {{item.nome}}</h5>
+          <h5 *ngIf="item.tipo == 'artista'" class="mb-1"><i class="fas fa-user"></i> {{item.nome}}</h5>
+        </div>
+      </a>
+    </div>
   </div>
-  <div *ngFor="let dado of disco.pesquisar(search)">
-    <a *ngIf="dado.tipo=='musica'" [routerLink]="[ '/musicas', dado.id ]">({{dado.tipo}}) {{ dado.titulo }}</a>
-    <a *ngIf="dado.tipo=='genero'" [routerLink]="[ '/generos', dado.id ]">({{dado.tipo}}) {{ dado.nome }}</a>
-    <a *ngIf="dado.tipo=='artista'" [routerLink]="['/artistas', dado.id]">({{dado.tipo}}) {{ dado.nome }}</a>
-  </div>
+</section>

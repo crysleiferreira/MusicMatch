@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UtilsService } from './utils.service';
+import { DadosBaseService } from './dados-base.service';
 
-describe('UtilsService', () => {
+describe('DadosBaseService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: UtilsService = TestBed.get(UtilsService);
+    const service: DadosBaseService = TestBed.get(DadosBaseService);
     expect(service).toBeTruthy();
   });
 });

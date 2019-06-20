@@ -10,6 +10,8 @@ import { MusicasComponent } from './musicas/musicas.component';
 import { ArtistaComponent } from './artista/artista.component';
 import { GeneroComponent } from './genero/genero.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListaDeMusicasComponent } from './lista-de-musicas/lista-de-musicas.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { PesquisaComponent } from './pesquisa/pesquisa.component';
     MusicasComponent,
     ArtistaComponent,
     GeneroComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    ListaDeMusicasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

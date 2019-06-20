@@ -1,6 +1,6 @@
-<section *ngIf="musica">
+<section *ngIf="musica else carregando">
   <h1 class="mb-4 mt-5 border-bottom">{{musica.titulo}}</h1>
-  <div>
+  <div *ngIf="musica.artistas">
     <span *ngIf="musica.artistas.length == 1"><i class="text-muted fas fa-user"></i></span>
     <span *ngIf="musica.artistas.length != 1"><i class="text-muted fas fa-users"></i></span>
     &nbsp;
@@ -8,60 +8,34 @@
       <a [routerLink]="['/artistas', artista.id]">{{ artista.nome }}</a><span *ngIf="!ultimo">, </span>
     </span>
   </div>
-  <div>
+  <div *ngIf="musica.genero">
     <i class="text-muted fas fa-tag"></i>
     &nbsp;
-    {{musica.genero.nome}}
-  </div><br>
-  <div>
-    <span>
-      <button (click)="disco.like(musica.titulo)" type="button" class="btn btn-success">Gostei</button> |
-      <button (click)="disco.naoGostar(musica.titulo)" type="button" class="btn btn-danger">Nao Gostei</button>
-    </span>
-    <span>
-      <h5> {{musica.gostar}} | {{musica.nGostar}}</h5>
-
-    </span>
+    <a [routerLink]="[ '/generos', musica.genero.id ]">{{musica.genero.nome}}</a>
   </div>
   <div>
-    <h5 *ngFor='let musica of disco.favoritos'>{{musica.titulo}}</h5>
+      <iframe width="560" height="315" [src]="vervideo(musica.video)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="mt-2">
+    <button class="btn btn-success" (click)="gostar()">
+      Gostar
+      <span class="badge badge-success bg-dark">{{musica.gostar}}</span>
+    </button>
+    &nbsp;
+    <button class="btn btn-danger" (click)="naoGostar()">
+      Não gostar
+      <span class="badge badge-danger bg-dark">{{musica.naoGostar}}</span>
+    </button>
+    <div *ngIf="musica.letra"><span style="white-space: pre-line">
+      {{musica.letra}}
+    </span>
+
+    </div>
+  </div>
+  <div class="mt-4" *ngIf="relacionadas">
+    <app-lista-de-musicas [musicas]="relacionadas"></app-lista-de-musicas>
   </div>
 </section>
-
-<section>
-<p *ngIf="musica.gostar">
-    <span *ngFor="let artista of musica.artistas">
-      <span
-        *ngFor="let musica of disco.listaDeMusicasDoArtista(artista.nome)"
-      >
-        <span *ngFor="let genero of disco.listaDeGeneros()">
-          <span *ngIf="genero.nome === musica.genero.nome">
-            <p *ngFor="let musica of genero.musicas">
-              {{ musica.titulo }}
-            </p>
-          </span>
-        </span>
-      </span>
-      <br />
-    </span>
-  </p>
-  <p *ngIf="musica.nGostar">
-    <span *ngFor="let artista of musica.artistas">
-      <span
-        *ngFor="let musica of disco.listaDeMusicasDoArtista(artista.nome)"
-      >
-        <!-- <span>
-          {{ musica.titulo }}
-        </span> -->
-        <span *ngFor="let genero of disco.listaDeGeneros()">
-          <span *ngIf="genero.nome !== musica.genero.nome">
-            <p *ngFor="let musica of genero.musicas">
-              {{ musica.titulo }}
-            </p>
-          </span>
-        </span>
-      </span>
-      <br />
-    </span>
-  </p>
-</section>
+<ng-template #carregando>
+  <section>Aguarde. Carregando...</section>
+</ng-template>

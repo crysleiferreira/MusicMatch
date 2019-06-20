@@ -1,0 +1,336 @@
+[
+    {
+        "id": 1,
+        "titulo": "O Show Tem Que Continuar",
+        "artistas": [
+            {
+                "id": 1,
+                "nome": "Beth Carvalho"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 1,
+            "nome": "Samba de Raiz"
+        },
+        "video": "mhDb8Pk1YCE",
+        "letra": "\nO teu choro já não toca meu bandolim\nDiz que minha voz sufoca seu violão\nAfrouxaram-se as cordas e assim desafina\nQue pobre das rimas da nossa canção\nHoje somos folha morta\nMetais em surdina\nFechando a cortina, vazio o salão\nSe os duetos não se encontram mais\nE os solos perderam a emoção\nSe acabou o gás\nPra cantar o mais simples refrão\nSe a gente nota\nQue uma só nota\nJá nos esgota\nO show perde a razão\nMas iremos achar o tom\nUm acorde com lindo som\nE fazer com que fique bom\nOutra vez o nosso cantar\nE a gente vai ser feliz\nOlha nós outra vez no ar\nO show tem que continuar\nSe os duetos não se encontram mais\nE os solos perderam a emoção\nSe acabou o gás\nPra cantar o mais simples refrão\nSe a gente nota\nQue uma só nota\nJá nos esgota\nO show perde a razão\nMas iremos…"
+    },
+    {
+        "id": 2,
+        "titulo": "Foi Um Rio Que Passou Em Minha Vida",
+        "artistas": [
+            {
+                "id": 2,
+                "nome": "Paulinho da Viola"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 1,
+            "nome": "Samba de Raiz"
+        },
+        "video": "DFBBy0RY8p0",
+        "letra": null
+    },
+    {
+        "id": 3,
+        "titulo": "Canta Canta, Minha Gente",
+        "artistas": [
+            {
+                "id": 3,
+                "nome": "Martinho Da Vila"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 1,
+            "nome": "Samba de Raiz"
+        },
+        "video": "X4Tp_TmjHRs",
+        "letra": null
+    },
+    {
+        "id": 4,
+        "titulo": "Deixa A Vida Me Levar",
+        "artistas": [
+            {
+                "id": 4,
+                "nome": "Zeca Pagodinho"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 1,
+            "nome": "Samba de Raiz"
+        },
+        "video": "HJzKCFxFlBY",
+        "letra": null
+    },
+    {
+        "id": 5,
+        "titulo": "Brisa",
+        "artistas": [
+            {
+                "id": 5,
+                "nome": "IZA"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 2,
+            "nome": "Pop Brasil"
+        },
+        "video": "0J8nAzl2bv4",
+        "letra": null
+    },
+    {
+        "id": 6,
+        "titulo": "Onda diferente (feat. Papatinho)",
+        "artistas": [
+            {
+                "id": 6,
+                "nome": "Anitta"
+            },
+            {
+                "id": 7,
+                "nome": "Ludmilla"
+            },
+            {
+                "id": 8,
+                "nome": "Snoop Dogg"
+            },
+            {
+                "id": 9,
+                "nome": "Papatinho"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 2,
+            "nome": "Pop Brasil"
+        },
+        "video": "syL7R25GOWk",
+        "letra": null
+    },
+    {
+        "id": 7,
+        "titulo": "Pior Que Possa Imaginar",
+        "artistas": [
+            {
+                "id": 10,
+                "nome": "Luísa Sonza"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 2,
+            "nome": "Pop Brasil"
+        },
+        "video": "NvGrDbNREgg",
+        "letra": null
+    },
+    {
+        "id": 8,
+        "titulo": "Hoje Lembrei Do Teu Amor",
+        "artistas": [
+            {
+                "id": 11,
+                "nome": "Tiago Iorc"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 2,
+            "nome": "Pop Brasil"
+        },
+        "video": "9PMINkruLTw",
+        "letra": null
+    },
+    {
+        "id": 9,
+        "titulo": "Ousado Amor",
+        "artistas": [
+            {
+                "id": 12,
+                "nome": "Isaias Saad"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 3,
+            "nome": "Sucessos Gospel"
+        },
+        "video": "wSKKEAnLTDw",
+        "letra": null
+    },
+    {
+        "id": 10,
+        "titulo": "Tua Graça Me Basta",
+        "artistas": [
+            {
+                "id": 13,
+                "nome": "Davi Sacer"
+            },
+            {
+                "id": 14,
+                "nome": "Preto no Branco"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 3,
+            "nome": "Sucessos Gospel"
+        },
+        "video": "4y0_rOSnb_g",
+        "letra": null
+    },
+    {
+        "id": 11,
+        "titulo": "Ele Vem - Ao Vivo",
+        "artistas": [
+            {
+                "id": 15,
+                "nome": "Gabriel Guedes de Almeida"
+            },
+            {
+                "id": 16,
+                "nome": "Gabriela Rocha"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 3,
+            "nome": "Sucessos Gospel"
+        },
+        "video": "YudXB8MZRTs",
+        "letra": null
+    },
+    {
+        "id": 12,
+        "titulo": "Autor da Vida",
+        "artistas": [
+            {
+                "id": 17,
+                "nome": "Aline Barros"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 3,
+            "nome": "Sucessos Gospel"
+        },
+        "video": "4DFBOuQQi1s",
+        "letra": null
+    },
+    {
+        "id": 13,
+        "titulo": "Chega de Saudade",
+        "artistas": [
+            {
+                "id": 18,
+                "nome": "João Gilberto"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 4,
+            "nome": "Bossa Nova"
+        },
+        "video": "yUuJrpP0Mak",
+        "letra": null
+    },
+    {
+        "id": 14,
+        "titulo": "Samba Da Benção",
+        "artistas": [
+            {
+                "id": 19,
+                "nome": "Vinícius de Moraes"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 4,
+            "nome": "Bossa Nova"
+        },
+        "video": "Fz0eddwTjnk",
+        "letra": null
+    },
+    {
+        "id": 15,
+        "titulo": "Desafinado",
+        "artistas": [
+            {
+                "id": 18,
+                "nome": "João Gilberto"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 4,
+            "nome": "Bossa Nova"
+        },
+        "video": "tCMhuN3053o",
+        "letra": null
+    },
+    {
+        "id": 16,
+        "titulo": "Fotografia",
+        "artistas": [
+            {
+                "id": 20,
+                "nome": "Elis Regina"
+            },
+            {
+                "id": 21,
+                "nome": "Antônio Carlos Jobim"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 4,
+            "nome": "Bossa Nova"
+        },
+        "video": "8CJNBcKw8RI",
+        "letra": null
+    },
+    {
+        "id": 17,
+        "titulo": "Pela luz dos olhos teus",
+        "artistas": [
+            {
+                "id": 21,
+                "nome": "Antônio Carlos Jobim"
+            },
+            {
+                "id": 22,
+                "nome": "Miúcha"
+            }
+        ],
+        "gostar": 0,
+        "naoGostar": 0,
+        "genero": {
+            "id": 4,
+            "nome": "Bossa Nova"
+        },
+        "video": "Ll7lkSQS6OQ",
+        "letra": null
+    }
+]
