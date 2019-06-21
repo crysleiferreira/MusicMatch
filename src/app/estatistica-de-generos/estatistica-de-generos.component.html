@@ -1,0 +1,11 @@
+<!-- apresenta a lista de curtidas -->
+<div>
+  <h4>Apresenta lista de curtidas</h4><br>
+  <h4 *ngFor="let genero of musicas">
+      <span *ngIf="genero.gostar !== 0"><p>{{genero.titulo}}</p></span>
+    </h4>
+</div>
+<br>
+<div>
+  <h4>Rank de visualizações</h4>
+</div>

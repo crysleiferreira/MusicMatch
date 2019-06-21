@@ -27,6 +27,8 @@ export class GenerosService extends DadosBaseService {
       );
   }
 
+
+
   /**
    * Faz uma requisição HTTP para o arquivo `generos.json`
    * utilizando o método []`lista()`]{@link GenerosService#lista}.
