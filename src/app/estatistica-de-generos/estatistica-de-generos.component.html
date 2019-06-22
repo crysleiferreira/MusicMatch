@@ -1,18 +1,18 @@
 <!-- apresenta a lista de curtidas -->
 <div>
   <h4>Apresenta lista de curtidas</h4><br>
-  <h4 *ngFor="let genero of musicas">
+  <span *ngFor="let genero of musicas">
       <span *ngIf="genero.gostar !== 0"><p>{{genero.titulo}}</p></span>
-    </h4>
+  </span>
 </div>
 <br>
 <div>
-  <h4>Rank de maior visualizações</h4>
-  <span *ngFor="let musica of listaRanking()">{{ musica.nome }} | {{ musica.view }}</span>
+  <h4>Musica com maior curitida</h4>
+  <span >{{ maiorMusica() }} </span>
 </div>
-
+<br>
 <div>
-  <h4>Rank de maior visualizações</h4>
+  <h4>Rank de curtidas</h4>
   <table border="1">
     <tr>
       <td>Titulo da Musica </td>

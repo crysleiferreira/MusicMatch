@@ -11,7 +11,7 @@ import { MusicasService } from '../musicas.service';
 })
 export class EstatisticaDeGenerosComponent implements OnInit {
   musicas = null;
-  lista = []
+  lista = null;
   constructor(private musicas$:MusicasService, private route: ActivatedRoute,private sanitizer:DomSanitizer) { }
 
   ngOnInit() {
@@ -22,17 +22,13 @@ export class EstatisticaDeGenerosComponent implements OnInit {
     .subscribe(musicas => this.musicas = musicas);
   }
 
-  listaRanking(){
+  maiorMusica(){
     let cont = 0;
-    let music = {nome: null, 
-    view: 0};
 
     for(let musica of this.musicas){
       if(musica.gostar > cont ){
         cont = musica.gostar;
-        music['nome'] = musica.titulo;
-        music['view'] = musica.gostar;
-        this.lista.push(music)
+        this.lista = musica.titulo;
       }
     }
     return this.lista;
