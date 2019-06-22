@@ -24,6 +24,16 @@ export class MusicasService extends DadosBaseService {
       );
   }
 
+  //listaRanking(): Observable<Musica[]>{
+   // return this.http.get<Musica[]>(this.URL)
+    //.pipe(
+    //  tap(
+
+    //))
+ // }
+
+
+
   listaPorGenero(genero: Genero): Observable<Musica[]> {
     return this.lista().pipe(
       map(musicas => {

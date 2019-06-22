@@ -8,7 +8,7 @@
                 "nome": "Beth Carvalho"
             }
         ],
-        "gostar": 1,
+        "gostar": 50,
         "naoGostar": 0,
         "genero": {
             "id": 1,
@@ -44,7 +44,7 @@
                 "nome": "Martinho Da Vila"
             }
         ],
-        "gostar": 0,
+        "gostar": 1,
         "naoGostar": 0,
         "genero": {
             "id": 1,
@@ -62,7 +62,7 @@
                 "nome": "Zeca Pagodinho"
             }
         ],
-        "gostar": 0,
+        "gostar": 1,
         "naoGostar": 0,
         "genero": {
             "id": 1,
@@ -80,7 +80,7 @@
                 "nome": "IZA"
             }
         ],
-        "gostar": 0,
+        "gostar": 25,
         "naoGostar": 0,
         "genero": {
             "id": 2,
@@ -110,7 +110,7 @@
                 "nome": "Papatinho"
             }
         ],
-        "gostar": 0,
+        "gostar": 4,
         "naoGostar": 0,
         "genero": {
             "id": 2,

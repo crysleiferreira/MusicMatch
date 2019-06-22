@@ -7,5 +7,20 @@
 </div>
 <br>
 <div>
-  <h4>Rank de visualizações</h4>
+  <h4>Rank de maior visualizações</h4>
+  <span *ngFor="let musica of listaRanking()">{{ musica.nome }} | {{ musica.view }}</span>
+</div>
+
+<div>
+  <h4>Rank de maior visualizações</h4>
+  <table border="1">
+    <tr>
+      <td>Titulo da Musica </td>
+      <td>Qtd de likes </td>
+    </tr>
+    <tr *ngFor="let musica of ranking()">
+      <td>{{ musica.titulo }} </td>
+      <td> {{ musica.gostar }} </td>
+    </tr>
+  </table>
 </div>
