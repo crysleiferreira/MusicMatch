@@ -24,20 +24,44 @@ export class EstatisticaDeGenerosComponent implements OnInit {
 
   maiorMusica(){
     let cont = 0;
-
+    let lista = null;
     for(let musica of this.musicas){
       if(musica.gostar > cont ){
         cont = musica.gostar;
-        this.lista = musica.titulo;
+        lista = musica.titulo;
       }
     }
-    return this.lista;
+    return lista;
   };
   ranking(){
-    const ordenadas = this.musicas.sort((m1, m2) => m2.gostar - m1.gostar);
+    const ordenadas = this.musicas.sort((m1, m2) => m2.gostar - m1.gostar).slice(0,5);
     return ordenadas;
+  };
+  generoMaiorCurtida(){
+    let lista = {
+      'sambaraiz' : 0,
+      'pop':0,
+      'gospel':0,
+      'bossa': 0
+    };
+    let listaGenero = [];
+    for(let artista of this.musicas){
+      if(artista.genero.nome === 'Samba de Raiz'){
+        lista['sambaraiz'] += artista.gostar;
+      } else if(artista.genero.nome === 'Pop Brasil'){
+        lista['pop'] += artista.gostar;
+      } else if(artista.genero.nome === 'Sucessos Gospel'){
+        lista['gospel'] += artista.gostar;
+      } else if(artista.genero.nome === 'Bossa Nova'){
+        lista['bossa'] += artista.gostar;
+      }
+    }
+    listaGenero.push({'nome': 'Bossa Nova', 'quantidade': lista.bossa});
+    listaGenero.push({'nome': 'Samba de Raiz', 'quantidade': lista.sambaraiz});
+    listaGenero.push({'nome':'Pop Brasil','quantidade': lista.pop});
+    listaGenero.push({'nome': 'Sucessos Gospel', 'quantidade': lista.gospel});
+    return listaGenero.sort((m1, m2) => m2.quantidade - m1.quantidade);
   }
-
-
+  
 
 }

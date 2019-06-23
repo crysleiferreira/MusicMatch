@@ -12,7 +12,7 @@
 </div>
 <br>
 <div>
-  <h4>Rank de curtidas</h4>
+  <h4>Top 5 : Rank de curtidas</h4>
   <table border="1">
     <tr>
       <td>Titulo da Musica </td>
@@ -23,4 +23,10 @@
       <td> {{ musica.gostar }} </td>
     </tr>
   </table>
+</div>
+<div>
+  <h4>Curtidas por Generos</h4>
+  <span *ngFor='let genero of generoMaiorCurtida()'>
+      <p>{{ genero.nome }} : {{ genero.quantidade }} Likes </p>
+  </span>
 </div>
